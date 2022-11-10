@@ -127,6 +127,9 @@ def check_img_size(img_size, s=32):
         print('WARNING: --img-size %g must be multiple of max stride %g, updating to %g' % (img_size, s, new_size))
     return new_size
 
+def is_colab():
+    # Is environment a Google Colab instance?
+    return 'google.colab' in sys.modules
 
 def check_imshow():
     # Check if environment supports image displays
