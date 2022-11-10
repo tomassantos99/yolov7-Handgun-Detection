@@ -1,0 +1,13 @@
+train: ../dataset/train/images
+val: ../dataset/valid/images
+test: ../dataset/test/images
+
+nc: 1
+names: ['Handgun']
+
+roboflow:
+  workspace: tomas-santos
+  project: gun-detection-training
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/tomas-santos/gun-detection-training/dataset/1
