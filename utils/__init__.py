@@ -60,6 +60,6 @@ def notebook_init(verbose=True):
     else:
         s = ''
 
-    select_device()
+    select_device(device='0')
     print(emojis(f'Setup complete ✅ {s}'))
     return display
