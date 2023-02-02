@@ -462,12 +462,8 @@ def train(hyp, opt, device, tb_writer=None):
 
                 # Save last, best and delete
                 torch.save(ckpt, last)
-                torch.save(ckpt, os.path.join(os.getcwd(), 'gdrive/MyDrive', opt.drive_folder,'last_{:03d}.pt'.format(epoch)))
-                torch.save(ckpt, os.path.join(os.getcwd(), 'gdrive/MyDrive', opt.drive_folder,'last.pt'))
                 if best_fitness == fi:
                     torch.save(ckpt, best)
-                    torch.save(ckpt, os.path.join(os.getcwd(), 'gdrive/MyDrive', opt.drive_folder,'best.pt'))
-                    torch.save(ckpt, os.path.join(os.getcwd(), 'gdrive/MyDrive', opt.drive_folder,'best_{:03d}.pt'.format(epoch)))
                 if (best_fitness == fi) and (epoch >= 200):
                     torch.save(ckpt, wdir / 'best_{:03d}.pt'.format(epoch))
                 if epoch == 0:

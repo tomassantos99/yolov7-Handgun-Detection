@@ -1,6 +1,6 @@
-train: ./dataset/train/images
-val: ./dataset/valid/images
-test: ./dataset/test/images
+train: ./dataset/train_only_context/images
+val: ./dataset/valid_only_context/images
+test: ./dataset/camera5/images
 
 nc: 1
 names: ['Handgun']
